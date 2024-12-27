@@ -1,6 +1,3 @@
-> [!IMPORTANT]  
-> PsExtra Rewritten and Lite are temporarily offline due to a storm. Also, development of PsExtra: Rewritten is on hold during that time. We apologize for the inconvenience.
-
 A Pseudo-localization Translater Demo
 
 一个伪本地化演示
