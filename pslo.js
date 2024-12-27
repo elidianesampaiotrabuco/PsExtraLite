@@ -6,9 +6,11 @@ var pshist = ""
 fetch('character.json')    
 .then(response => response.json())
 .then(jsonData => {charLib = jsonData})
+toastr.options.closeButton = true;
 
 //主函数
 function pseudoLocalize() {
+  toastr.success('Your text has been translated.');
   let origin = pstype.value;
   let result = "";
   let oriLength = origin.length
