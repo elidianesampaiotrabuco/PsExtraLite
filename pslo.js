@@ -8,7 +8,7 @@ fetch('character.json')
 .then(jsonData => {charLib = jsonData})
 toastr.options.closeButton = true;
 toastr.options.closeMethod = 'fadeOut';
-toastr.options.closeDuration = 250;
+toastr.options.closeDuration = 300;
 toastr.options.closeEasing = 'swing';
 
 //主函数
