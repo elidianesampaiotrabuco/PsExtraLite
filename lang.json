@@ -1,5 +1,5 @@
 {
-  "ver": "v1.3.0-beta.1",
+  "ver": "v1.3.0-beta.2",
   "author": "ASTerisk Games (original by STR)",
   "zh-CN":{
     "langZh": "中文",
@@ -76,6 +76,6 @@
   "esctxt": "Preserve escape characters (such as \\n)",
   "clear": "Clear",
   "whattxt": "Pseudolocalization (or qps-ploc, qps-plocm, qps-ploca, en-XA, en-XB) is a way to simulate the localization process. By doing so, the localization team will be able to effectively investigate issues that might occur during localization process (incorrect display of characters due to string length, etc.)<br>During pseudo-localization, English letters are replaced with accents and characters from other scripts. (For example, the letter a is replaced by any one of αäáàāāǎǎăăåå selected at random. ), separators etc. are also added to increase the string length.<br>For Example：“Windows Photo Gallery” → “ [1iaT9][ Ẅĭпðøωś Þнôтŏ Ģάŀļєяÿ !!! !] ”<br>More information: <a href='https://docs.microsoft.com/en-us/globalization/methodology/pseudolocalization' target='_blank'>https://docs.microsoft.com/en-us/globalization/methodology/pseudolocalization</a><br><br>More features are on the way. Thanks for your support!",
-  "logtxt": "<h4>v1.0</h4> <br/> * Initial release. <br/> <h4>v1.0.1</h4> <br/> * Minor tweaks and improvements <br/> <h4>v1.1</h4> <br/> * Backported some features and fixes from the legacy PsExtra to Lite, along with more new features <br/> <h4>v1.2</h4> <br/> * New features <br/> <h4>v1.2.1</h4> <br/> * Temporarily disable the en-XB option (sorry!) <br/> <h4>v1.3.0-beta.1</h4> <br/> * Mobile fixes <br/> * Replaced the link that leads to Suntrise's website with a rickroll as a placeholder</h4>"
+  "logtxt": "<h4>v1.0</h4> <br/> * Initial release. <br/> <h4>v1.0.1</h4> <br/> * Minor tweaks and improvements <br/> <h4>v1.1</h4> <br/> * Backported some features and fixes from the legacy PsExtra to Lite, along with more new features <br/> <h4>v1.2</h4> <br/> * New features <br/> <h4>v1.2.1</h4> <br/> * Temporarily disable the en-XB option (sorry!) <br/> <h4>v1.3.0-beta.1</h4> <br/> * Mobile fixes <br/> * Replaced the link that leads to Suntrise's website with a rickroll as a placeholder <br/> <h4>v1.3.0-beta.2</h4> <br> * The homepage link (in Chinese version) is no longer a placeholder"
 }
 }
