@@ -5,7 +5,7 @@
     "langZh": "Português",
     "langEn": "Inglês",
     "resph": "Sua tradução será mostrada aqui",
-    "title": "PsXTRA",
+    "title": "PsXTRA v2.0.1",
     "pageTitle": "PsXTRA",
     "bkhome": "block",
     "hmtext": "← Meu site",
@@ -44,7 +44,7 @@
   "langZh": "Portuguese",
   "langEn": "English",
   "resph": "Your translation will be shown here",
-  "title": "PsXTRA",
+  "title": "PsXTRA v2.0.1",
   "pageTitle": "PsXTRA",
   "bkhome": "none",
   "what": "What is pseudo-localization?",
@@ -79,4 +79,5 @@
   "logtxt": "<h4>v1.0</h4> <br/> * Initial release. <br/> <h4>v1.0.1</h4> <br/> * Minor tweaks and improvements <br/> <h4>v1.1</h4> <br/> * Backported some features and fixes from the legacy PsExtra to Lite, along with more new features <br/> <h4>v1.2</h4> <br/> * New features <br/> <h4>v1.2.1</h4> <br/> * Temporarily disable the en-XB option (sorry!) <br/> <h4>v1.3.0-beta.1</h4> <br/> * Mobile fixes <br/> * Replaced the link that leads to Suntrise's website with a rickroll as a placeholder <br/> <h4>v1.3.0-beta.2</h4> <br> * The homepage link (in Chinese version) is no longer a placeholder <br> <h4>v2.0.0</h4> <br> * WIP"
 }
 }
+
 
