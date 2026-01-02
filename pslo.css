@@ -1,5 +1,5 @@
-body{
-    font-family: Roboto;
+body {
+    font-family: 'Droid Sans';
     font-size: 20px;
     /* background: #f5f5f5; */
     line-height: 35px;
@@ -8,14 +8,17 @@ body{
    background-repeat: no-repeat;
    background-size: 1750px 1280px;
   }
-  textarea{
-    font-family: Roboto;
+
+  textarea {
+    font-family: 'Droid Sans';
     font-size: 20px;
   }
-  a{
+
+  a {
     text-decoration: none;
   }
-  .notice{
+
+  .notice {
     overflow: scroll;
     position: absolute;
     padding: 5px;
@@ -28,7 +31,8 @@ body{
     background: #fff;
     word-break:break-all
   }
-    .notice-mp{
+
+    .notice-mp {
     overflow: scroll;
     position: absolute;
     padding: 5px;
@@ -43,7 +47,8 @@ body{
     background: #fff;
     word-break:break-all
   }
-    button{
+
+    button {
     padding: 10px;
     color: #fff;
     border: 2px solid #07d;
@@ -51,9 +56,19 @@ body{
     font-weight: bold;
     background: #07d;
   }
+
   button:hover {
     background: #15b;
 }
-li{
+
+li {
   line-height: 120%;
+}
+
+h3 {
+color: white;
+}
+
+p {
+color: white;
 }
