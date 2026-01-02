@@ -4,9 +4,9 @@ body{
     /* background: #f5f5f5; */
     line-height: 35px;
     opacity: 0.8;
-background-image:  repeating-linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5), repeating-linear-gradient(45deg, #f5f5f5 25%, #FFFFFF 25%, #FFFFFF 75%, #f5f5f5 75%, #f5f5f5);
-background-position: 0 0, 10px 10px;
-background-size: 20px 20px;
+   background-image: url("Z_2026-01-02_17.07.19.png");
+   background-repeat: no-repeat;
+   background-size: 1000px 1000px;
   }
   textarea{
     font-family: Roboto;

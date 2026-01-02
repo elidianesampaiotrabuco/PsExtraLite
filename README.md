@@ -10,3 +10,6 @@ A Pseudo-localization Translater Demo
 该网页演示了伪本地化的一部分，即用不同的字符替换英文字母和添加分隔符。
 
 更多功能将在之后更新，感谢大家的支持！
+
+# Credits
+* Leaf picture - Romain Guy
