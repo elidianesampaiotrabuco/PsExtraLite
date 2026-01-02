@@ -13,3 +13,4 @@ A Pseudo-localization Translater Demo
 
 # Credits
 * Leaf picture - Romain Guy
+* Material Design Lite - Google
