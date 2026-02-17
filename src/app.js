@@ -307,16 +307,16 @@ function initEvents() {
 
   $("github-btn-mobile")?.addEventListener("click", () => {
     $("mobile-menu")?.classList.remove("show");
-    window.open("https://github.com/suntrise/pseudo", "_blank");
+    window.open("https://github.com/elidianesampaiotrabuco/PsExtraLite", "_blank");
   });
 
   $("exe-btn")?.addEventListener("click", () => {
-    window.open("https://github.com/suntrise/Pseudo-localization-Demo", "_blank");
+    window.open("https://elidianesampaiotrabuco.github.io/LOLKitteh-v2", "_blank");
   });
 
   $("exe-btn-mobile")?.addEventListener("click", () => {
     $("mobile-menu")?.classList.remove("show");
-    window.open("https://github.com/suntrise/Pseudo-localization-Demo", "_blank");
+    window.open("https://elidianesampaiotrabuco.github.io/LOLKitteh-v2", "_blank");
   });
 
   $("lang-btn")?.addEventListener("click", () => setLang(state.currentLang === "zh" ? "en" : "zh"));
