@@ -1,1 +1,214 @@
-site's getting reworked rn, be patient!
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pseudo Localization Demo" />
+    <meta name="theme-color" content="#6750A4" />
+    <title>Pseudo Localization Demo</title>
+
+    <script>
+        window.BASE_PATH = location.pathname.replace(/\/[^/]*$/, '') + '/';
+    </script>
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/@material/web/all.js?module"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="app-bar-content">
+            <h1 id="app-title" class="app-title"></h1>
+            <div class="topbar-actions" id="topbar-actions">
+                <md-text-button id="exe-btn" class="topbar-btn"></md-text-button>
+                <md-text-button id="library-btn-top" class="topbar-btn"></md-text-button>
+                <md-text-button id="about-btn" class="topbar-btn"></md-text-button>
+                <md-text-button id="lang-btn" class="topbar-btn"></md-text-button>
+                <a href="https://github.com/suntrise/pseudo" target="_blank" rel="noopener" class="github-btn"
+                    aria-label="GitHub">
+                    <svg height="24" viewBox="0 0 16 16" width="24" fill="currentColor">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                </a>
+            </div>
+            <button id="menu-btn" class="menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <md-text-button id="github-btn-mobile" class="mobile-menu-btn">GitHub</md-text-button>
+            <md-text-button id="exe-btn-mobile" class="mobile-menu-btn"></md-text-button>
+            <md-text-button id="library-btn-mobile" class="mobile-menu-btn"></md-text-button>
+            <md-text-button id="about-btn-mobile" class="mobile-menu-btn"></md-text-button>
+            <md-text-button id="lang-btn-mobile" class="mobile-menu-btn"></md-text-button>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="mode-row">
+            <label>
+                <md-radio id="mode-xa" name="mode" value="XA" checked></md-radio>
+                <span id="label-mode-xa"></span>
+            </label>
+            <label>
+                <md-radio id="mode-xb" name="mode" value="XB"></md-radio>
+                <span id="label-mode-xb"></span>
+            </label>
+        </section>
+
+        <div class="text-wrapper">
+            <div class="panel">
+                <md-filled-text-field id="input-text" type="textarea" rows="14"
+                    style="width: 100%"></md-filled-text-field>
+            </div>
+            <div class="divider"></div>
+            <div class="panel">
+                <md-filled-text-field id="output-text" type="textarea" rows="14" style="width: 100%"
+                    readonly></md-filled-text-field>
+            </div>
+        </div>
+
+        <section class="actions">
+            <md-filled-button id="process-btn"></md-filled-button>
+            <md-outlined-button id="clear-btn"></md-outlined-button>
+            <md-outlined-button id="copy-btn"></md-outlined-button>
+            <md-outlined-button id="history-btn"></md-outlined-button>
+        </section>
+
+        <section class="options">
+            <div class="option-group">
+                <span class="option-label" id="label-suffix"></span>
+                <select id="suffix-select" class="option-select">
+                    <option value="0" id="suffix-none"></option>
+                    <option value="1" id="suffix-ms"></option>
+                    <option value="2" id="suffix-android"></option>
+                    <option value="3" id="suffix-num"></option>
+                    <option value="4" id="suffix-custom"></option>
+                </select>
+            </div>
+
+            <div class="option-group custom-suffix-options" id="custom-suffix-options" style="display: none">
+                <span id="label-custom-prefix"></span>
+                <input type="text" id="custom-prefix" class="option-input" value="[" />
+                <span id="label-custom-suffix"></span>
+                <input type="text" id="custom-suffix" class="option-input" value="]" />
+                <span id="label-custom-repeat"></span>
+                <input type="text" id="custom-repeat" class="option-input" value="" />
+                <span id="label-custom-repeat-count"></span>
+                <input type="number" id="custom-repeat-count" class="option-input" value="7" min="1" />
+            </div>
+
+            <div class="option">
+                <md-switch id="upper"></md-switch>
+                <span id="label-upper"></span>
+            </div>
+
+            <div class="option">
+                <md-switch id="lower"></md-switch>
+                <span id="label-lower"></span>
+            </div>
+
+            <div class="option">
+                <md-switch id="dbvowel"></md-switch>
+                <span id="label-dbvowel"></span>
+            </div>
+            <div class="option-group" id="dbvowel-options" style="display: none">
+                <span id="label-dbvowel-count"></span>
+                <select id="dbvowel-count" class="option-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="option">
+                <md-switch id="numcir"></md-switch>
+                <span id="label-numcir"></span>
+            </div>
+
+            <div class="option">
+                <md-switch id="addHash"></md-switch>
+                <span id="label-hash"></span>
+            </div>
+            <div class="option-group" id="hash-options" style="display: none">
+                <span id="label-hash-length"></span>
+                <select id="hash-length" class="option-select">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6" selected>6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div class="option">
+                <md-switch id="preserveEsc"></md-switch>
+                <span id="label-preserve-esc"></span>
+            </div>
+        </section>
+    </main>
+
+    <div id="history-modal" class="modal">
+        <div class="modal-backdrop" id="history-backdrop"></div>
+        <div class="modal-panel">
+            <div class="modal-header">
+                <span id="history-title-text">History</span>
+                <button class="modal-close" id="close-history-btn">&times;</button>
+            </div>
+            <div class="modal-content" id="history-content">
+                <p>No processing history yet.</p>
+            </div>
+            <div class="modal-actions">
+                <md-text-button id="clear-history-btn">Clear</md-text-button>
+            </div>
+        </div>
+    </div>
+
+    <div id="library-modal" class="modal">
+        <div class="modal-backdrop" id="library-backdrop"></div>
+        <div class="modal-panel">
+            <div class="modal-header">
+                <span id="library-title-text">Character Library</span>
+                <button class="modal-close" id="close-library-btn">&times;</button>
+            </div>
+            <div class="modal-content" id="library-content">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about-modal" class="modal">
+        <div class="modal-backdrop" id="about-backdrop"></div>
+        <div class="modal-panel">
+            <div class="modal-header">
+                <span id="about-title-text">About</span>
+                <button class="modal-close" id="close-about-btn">&times;</button>
+            </div>
+            <div class="modal-content" id="about-content"></div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script type="module" src="src/app.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register(window.BASE_PATH + "sw.js");
+        }
+    </script>
+</body>
+
+</html>
