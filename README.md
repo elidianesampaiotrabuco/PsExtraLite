@@ -1,4 +1,4 @@
-# Source code of PsXTRA (version 3.0)
+# Source code of PsXTRA (version 26.0)
 
 A Pseudo-localization Translater Demo
 
